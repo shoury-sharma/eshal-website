@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
@@ -16,6 +21,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    overflow-x: hidden;
 }
 
 /* Typography */
@@ -148,6 +154,7 @@ p {
 .hero {
     padding: 120px 0 80px;
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    overflow-x: hidden;
 }
 
 .hero .container {
@@ -612,6 +619,20 @@ p {
     h1 { font-size: 2rem; }
     h2 { font-size: 1.75rem; }
     h3 { font-size: 1.5rem; }
+    
+    /* Lottie animation adjustments for mobile */
+    .hero-visual {
+        opacity: 0.8;
+        z-index: 1;
+        position: relative;
+    }
+    
+    .hero-visual dotlottie-wc {
+        opacity: 0.8;
+        width: 300px !important;
+        height: 300px !important;
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -639,6 +660,12 @@ p {
     .btn-large {
         padding: 12px 24px;
         font-size: 1rem;
+    }
+    
+    .hero-visual dotlottie-wc {
+        width: 250px !important;
+        height: 250px !important;
+        max-width: 100%;
     }
 }
 
